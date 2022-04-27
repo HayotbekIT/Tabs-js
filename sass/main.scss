@@ -1,0 +1,73 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(107, 107, 107);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    &>*+* {
+        margin-top: 50px;
+    }
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+p {
+    margin: 0;
+}
+
+// ----- Tab
+.tab {
+    width: 1000px;
+}
+
+.tab__nav {
+    font-size: 0;
+    .nav-button {
+        padding: 10px 15px;
+        &:hover {
+            background-color: rgb(144, 210, 236);
+        }
+        &.active {
+            background-color: rgb(121, 193, 241);
+        }
+    }
+    &>* {
+        border-right: 2px solid rgb(89, 133, 120);
+    }
+    &>*:first-child {
+        border-left: 2px solid rgb(89, 133, 120);
+    }
+}
+
+.tab__content {
+    background-color: #fff;
+    padding: 8px 12px;
+    border: 2px solid rgb(89, 133, 120);
+    &>*+* {
+        margin-top: 10px;
+    }
+    .tab__block {
+        text-align: justify;
+        font-size: 18px;
+        display: none;
+        line-height: 1.5;
+        &.active {
+            display: block;
+        }
+    }
+}
